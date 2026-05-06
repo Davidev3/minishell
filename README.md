@@ -467,9 +467,3 @@ cadastro-ncurses/
 ├── main.c        ← código-fonte único
 └── README.md     ← este arquivo
 ```
-
----
-
-## 📄 Licença
-
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
