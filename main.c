@@ -304,7 +304,8 @@ static void buscar(WINDOW *status_win) {
     snprintf(tmp, sizeof(tmp), "Busca por '%s': %d resultado(s) | Q fecha", termo, encontrados);
     msg_status(status_win, tmp, encontrados > 0 ? 1 : 2);
 
-    while (wgetch(bwin) != 'q' && wgetch(bwin) != 'Q');
+    int tecla;
+    do { tecla = wgetch(bwin); } while (tecla != 'q' && tecla != 'Q' && tecla != 27);
 
     delwin(bwin);
     touchwin(stdscr); refresh();
