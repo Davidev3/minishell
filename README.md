@@ -1,29 +1,29 @@
-# Sistema de cadastro no terminal
+# Terminal Registration System in C
 
-Aplicação de estudo em C com interface `ncurses` para cadastrar, listar, buscar, editar e remover registros. Usa `struct`, array de até 100 registros, busca por nome ou cidade e exclusão lógica.
+A learning project that uses `ncurses` to create, list, search, edit, and soft-delete records from a keyboard-driven terminal interface. It demonstrates structs, arrays, and in-memory state.
 
-> Os registros ficam somente na memória durante a execução. Não há banco de dados nem persistência em arquivo.
+> Demo data stays in memory only and disappears when the program exits. The form includes personal-data fields such as email and CPF; use fictional values when trying the project. Do not use it to manage real personal records.
 
-## Compilar e executar
+## Build and run
 
-Instale um compilador C e a biblioteca de desenvolvimento ncurses (no Debian/Ubuntu: `sudo apt install gcc libncurses-dev`). Em um terminal com suporte a cores:
+Install a C compiler and ncurses development files. On Debian/Ubuntu: `sudo apt install gcc libncurses-dev`.
 
 ```bash
 gcc -std=c11 -Wall -Wextra main.c -lncurses -o cadastro
 ./cadastro
 ```
 
-No menu, use as setas, Enter ou as teclas 1–5; pressione Q para sair.
+Use a color-capable terminal. Navigate with arrow keys, Enter, or keys 1–5; press Q to quit.
 
-## Funcionalidades
+## Features
 
-| Tecla | Operação |
+| Key | Action |
 |---|---|
-| 1 | Novo cadastro |
-| 2 | Listar registros ativos |
-| 3 | Buscar por nome ou cidade |
-| 4 | Editar registro por ID |
-| 5 | Remover registro por ID (exclusão lógica) |
-| Q | Sair |
+| 1 | Create a record |
+| 2 | List active records |
+| 3 | Search by name or city |
+| 4 | Edit by ID |
+| 5 | Soft-delete by ID |
+| Q | Quit |
 
-O arquivo `main.c` contém a interface e a lógica do cadastro. Este projeto é um painel de cadastro no terminal, embora o nome do repositório seja `minishell`.
+The project lives in a repository named `minishell`, but implements a registration panel rather than a command shell.
